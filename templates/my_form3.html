@@ -1,14 +1,48 @@
 {% extends "layout.html" %}
 <!-- 
+<div>
+<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+Hey... say something!
+</textarea>
+</div>
+<input type="submit" value="Submit">
 
+ <input type="submit" name="submit_comments" value="Submit_comments">
+ 
+ 
+ 
+ <div class="mt-3 mb-3 form-width form-group">
+ <h5>Comments</h5>
+ <input class="form-width" id="comments" type="text" name="comments" placeholder="Tell us what you think!">
+
+
+
+ <textarea rows="3" name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;width:50%;" placeholder="Tell us what you think!">
+                  
 -->
 
    {% block main %}
 
-        <h1 class="mb-3">Kwykli</h1>
-        <h1 class="mb-3">Thank you for submitting your answers </h1>
+<form action="/remarks" , method="POST">
 
-       
+        <h1 class="mb-3">Kwykli</h1>
+        <h1 class="mb-3"> Do you have any suggestions? </h1>
+
+
+            <div>
+                     <h5>Comments</h5>
+                    
+<textarea rows="3" name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;width:50%;" placeholder="Tell us what you think!">
+               </textarea>
+                    </div>
+                    
+                    <div>
+                    <button class="btn btn-primary form-width btn-dark" onclick="">Submit Form</button> 
+                </div>
+
+
+
+</form>       
         
 {% endblock %}     
 

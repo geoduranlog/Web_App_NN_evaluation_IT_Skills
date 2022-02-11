@@ -7,6 +7,31 @@
 </html>
 <form action="/submitForm" , method="POST">
 <form  method="POST">
+
+
+
+
+           <div class="wrapper">
+            <p> {{ skill_var }}</p>  
+            </div>
+
+
+
+
+
+            
+             <div></div>
+            
+                <div class="mt-3 mb-3 form-group">
+                    <h5>What's your opinion about the answers provided?</h5>
+                    <select name="answer-satisfaction" class="form-width" id="answer-satisfaction">
+                        <option value="" disabled selected></option>
+                        <option value="Happy">Happy</option>
+                        <option value="Satisfied">Satisfied</option>
+                        <option value="Indiferent">Indiferent</option>
+                        <option value="Unhappy">Unhappy</option>
+                    </select>
+                </div> 
 -->
 
 
@@ -25,37 +50,105 @@
             <!-- TODO .... we believe the following skills are closely related-->
                 <div class="mt-3 mb-3 form-width form-group">
                     <h5>Dear {{ Name_user }}</h5>
+                    </div>
+                    
                     
                     <div>
-             
-                <p>Here are the 5 closest skills to "{{input_skill}}" : </p>
+               <p>Here there are three different ML models showing the 5 closest skills to "{{input_skill}}" : </p>
+                <p>Please rate each model using the stars bellow</p>
             
             
-            
-            <!-- Display skills in a box (check styles.css) -->
-            <div class="wrapper">
-            <p> {{ skill_var }}</p>  
             </div>
             
-            
-             <div></div>
-            
-                <div class="mt-3 mb-3 form-group">
-                    <h5>What's your opinion about the answers provided?</h5>
-                    <select name="answer-satisfaction" class="form-width" id="answer-satisfaction">
-                        <option value="" disabled selected></option>
-                        <option value="Happy">Happy</option>
-                        <option value="Satisfied">Satisfied</option>
-                        <option value="Indiferent">Indiferent</option>
-                        <option value="Unhappy">Unhappy</option>
-                    </select>
-                </div> 
+      <!-- Display skills in a grid of cards/boxes (check styles.css)      -->
+              
+     <div class="cards_grid ">
+     
+     
+     <!-- Model A -->
+     <div class="card">
+     <div class="container"> 
+     <h5 class="card__header">Model A</h5>
+      <div class="item1">{{ skill_var_ft }}</div>
+      
+        <!--
+     <div class="rating">
+<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div> 
+-->
+        
+         <ul class="rate-area">
+	<input type="radio" id="5-starA" name="rating_A" value="5" /><label for="5-starA" title="Amazing">5 stars</label>
+	<input type="radio" id="4-starA" name="rating_A" value="4" /><label for="4-starA" title="Good">4 stars</label>
+	<input type="radio" id="3-starA" name="rating_A" value="3" /><label for="3-starA" title="Average">3 stars</label>
+	<input type="radio" id="2-starA" name="rating_A" value="2" /><label for="2-starA" title="Not Good">2 stars</label>
+	<input type="radio" id="1-starA" name="rating_A" value="1" /><label for="1-starA" title="Bad">1 star</label>
+    </ul>
+      
+      </div>
+      </div>
+     
+     
+     
+     
+     
+     <!-- Model B -->
+      <div class="card">
+     <div class="container"> 
+     <h5 class="card__header">Model B</h5>
+      <div class="item2">{{ skill_var_w2v }}</div>
+        
+         <ul class="rate-area">
+	<input type="radio" id="5-starB" name="rating_B" value="5" /><label for="5-starB" title="Amazing">5 stars</label>
+	<input type="radio" id="4-starB" name="rating_B" value="4" /><label for="4-starB" title="Good">4 stars</label>
+	<input type="radio" id="3-starB" name="rating_B" value="3" /><label for="3-starB" title="Average">3 stars</label>
+	<input type="radio" id="2-starB" name="rating_B" value="2" /><label for="2-starB" title="Not Good">2 stars</label>
+	<input type="radio" id="1-starB" name="rating_B" value="1" /><label for="1-starB" title="Bad">1 star</label>
+    </ul>
+        
+      </div>
+      </div>
+      
+      
+      
+      
+      <!-- Model C -->
+      <div class="card">
+     <div class="container"> 
+     <h5 class="card__header">Model C</h5>
+      <div class="item3">{{ skill_var_gve }}</div>
+      
+      
+      <ul class="rate-area">
+	<input type="radio" id="5-starC" name="rating_C" value="5" /><label for="5-starC" title="Amazing">5 stars</label>
+	<input type="radio" id="4-starC" name="rating_C" value="4" /><label for="4-starC" title="Good">4 stars</label>
+	<input type="radio" id="3-starC" name="rating_C" value="3" /><label for="3-starC" title="Average">3 stars</label>
+	<input type="radio" id="2-starC" name="rating_C" value="2" /><label for="2-starC" title="Not Good">2 stars</label>
+	<input type="radio" id="1-starC" name="rating_C" value="1" /><label for="1-starC" title="Bad">1 star</label>
+    </ul>
+      
+      
+      
+      </div>
+      </div>       
+              
+    
+    
+    
+  
+  
+      
+  
+  
+  
+   
               
            <!-- 
             http://getbootstrap.com/docs/4.1/components/buttons/  <div id="fail"></div>   -->
 
-            <button class="btn btn-primary form-width btn-dark" onclick="">Submit form</button>         
-            
+            <div class="">
+            <button class="btn btn-primary form-width btn-dark" onclick="">Next</button>         
+            </div>
             
              <!--
             <input type="submit" name="submit_form" value="submit_form"> 

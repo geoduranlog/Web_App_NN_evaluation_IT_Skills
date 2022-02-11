@@ -1,16 +1,20 @@
 {% extends "layout.html" %}
-<!-- 
-<form method="POST">
-    <input name="text"> 
-    <input type="submit">
-</form>
-
-
-<form method="POST">
-         -->
 
 {% block main %}
 
+    <!-- http://getbootstrap.com/docs/4.1/components/alerts/ -->
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Error</h4>
+        <p>{{ message }}</p>
+    </div>
+
+{% endblock %}
+
+
+<!-- 
+
+
+{% block main %}
 
 <form method="POST">
     <div class="">
@@ -33,10 +37,11 @@
                     <h5>Skill</h5>
                     <input class="form-width" id="skill-input" type="text" name="skill-input" placeholder="Type the desired skill">
                     <input type="submit" name="submit_button_skills" value="Submit_skills">
-              
-                          
-              </div>      
-                 
+                    
+                    <h5> ERROR {{ message }}</h5>
+                    
+                </div>    
             </form>    
                 
 {% endblock %}
+-->
