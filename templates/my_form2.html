@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+<!--
+<html>
+<body>
+    <p>Here is my variable: {{ variable }}</p>
+</body>
+</html>
+<form action="/submitForm" , method="POST">
+<form  method="POST">
+-->
+
+
+{% block main %}
+
+<form action="/submitForm" , method="POST">
+    <div class="">
+        <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+        <h1 class="mb-3">Kwykli</h1>
+        <h1 class="mb-3">Skill Search - Evaluation Form</h1>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+        
+
+
+            <!-- TODO .... we believe the following skills are closely related-->
+                <div class="mt-3 mb-3 form-width form-group">
+                    <h5>Dear {{ Name_user }}</h5>
+                    
+                    <div>
+             
+                <p>Here are the 5 closest skills to "{{input_skill}}" : </p>
+            
+            
+            
+            <!-- Display skills in a box (check styles.css) -->
+            <div class="wrapper">
+            <p> {{ skill_var }}</p>  
+            </div>
+            
+            
+             <div></div>
+            
+                <div class="mt-3 mb-3 form-group">
+                    <h5>What's your opinion about the answers provided?</h5>
+                    <select name="answer-satisfaction" class="form-width" id="answer-satisfaction">
+                        <option value="" disabled selected></option>
+                        <option value="Happy">Happy</option>
+                        <option value="Satisfied">Satisfied</option>
+                        <option value="Indiferent">Indiferent</option>
+                        <option value="Unhappy">Unhappy</option>
+                    </select>
+                </div> 
+              
+           <!-- 
+            http://getbootstrap.com/docs/4.1/components/buttons/  <div id="fail"></div>   -->
+
+            <button class="btn btn-primary form-width btn-dark" onclick="">Submit form</button>         
+            
+            
+             <!--
+            <input type="submit" name="submit_form" value="submit_form"> 
+               -->
+                
+            </form>    
+                
+{% endblock %}

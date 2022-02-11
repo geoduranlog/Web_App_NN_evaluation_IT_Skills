@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+<!-- 
+<form method="POST">
+    <input name="text"> 
+    <input type="submit">
+</form>
+         -->
+
+{% block main %}
+
+<form method="POST">
+    <div class="">
+        <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+        <h1 class="mb-3">Kwykli</h1>
+        <h1 class="mb-3">Skill Search - Evaluation Form</h1>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+        
+       
+        
+            <!-- TODO -->
+                <div class="mt-3 mb-3 form-width form-group">
+                    <h5>Name</h5>
+                    <input class="form-width" id="name-input" type="text" name="name-input" placeholder="Write your Name">
+                </div>
+                </div>
+                
+             <div class="mt-3 mb-3 form-width form-group">
+                    <h5>Skill</h5>
+                    <input class="form-width" id="skill-input" type="text" name="skill-input" placeholder="Type the desired skill">
+                    <input type="submit" name="submit_button_skills" value="Submit_skills">
+            
+            </form>    
+                
+{% endblock %}

@@ -1,0 +1,33 @@
+/* TODO */
+html { font-family: sans-serif; background: #ffdab9; padding: 1rem; }
+/* body { max-width: 960px; margin: 0 auto; background: white; }
+ h1 { font-family: serif; color: #377ba8; margin: 1rem 0; } */
+body { max-width: 960px; margin: 0 auto; background: #eee; }
+.content { padding: 0 1rem 1rem; }
+.form-width {
+     width: 20em;
+}
+
+
+/* p.one { 
+border-style: solid;
+    border-width: 5px;
+    }
+.wrapper{
+  border: solid 3px #4D545E; padding: 6px;
+  }
+    */
+
+.wrapper{
+  border: dashed 3px #4D545E ; padding: 6px;
+  }
+
+.center{
+  text-align:center;
+  }
+
+
+table, th, tr, td {
+
+}
+
